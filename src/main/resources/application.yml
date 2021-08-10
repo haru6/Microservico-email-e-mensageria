@@ -11,11 +11,13 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: *******@gmail.com
-    password: ******************
+    username: *********@gmail.com
+    password: ********************
     properties:
       mail:
         smtp:
           auth: true
           starttls:
             enable: true
+  rabbitmq:
+    addresses: amqps://*****************************************i_K-@elk.rmq2.cloudamqp.com/********************
