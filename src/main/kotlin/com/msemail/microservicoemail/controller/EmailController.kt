@@ -2,7 +2,9 @@ package com.msemail.microservicoemail.controller
 
 import com.msemail.microservicoemail.adapter.Conversor
 import com.msemail.microservicoemail.adapter.ConversorToDTO
+import com.msemail.microservicoemail.consumers.EmailConsumers
 import com.msemail.microservicoemail.dto.EmailDTO
+import com.msemail.microservicoemail.model.EmailModel
 import com.msemail.microservicoemail.service.EmailService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -16,7 +18,7 @@ import javax.validation.Valid
 @RequestMapping("api/v1/email")
 class EmailController(private val emailService: EmailService,
                       private val conversorToDTO: ConversorToDTO,
-                      private val conversor: Conversor) {
+                      private val conversor: Conversor){
 
     @PostMapping
     fun enviaEmail(@RequestBody @Valid emailDTO: EmailDTO): ResponseEntity<EmailDTO>{
